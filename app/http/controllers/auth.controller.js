@@ -165,7 +165,7 @@ class UserAuthController extends Controller {
       httpOnly: true,
       signed: true,
       sameSite: 'Lax',
-      secure: true,
+      // secure: true,
       path: '/',
       domain: process.env.DOMAIN,
     };
