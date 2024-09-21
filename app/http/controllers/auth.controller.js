@@ -167,7 +167,7 @@ class UserAuthController extends Controller {
       sameSite: 'Lax',
       // secure: true,
       path: '/',
-      domain: process.env.DOMAIN,
+      // domain: process.env.DOMAIN,
     };
     res.cookie('accessToken', null, cookieOptions);
     res.cookie('refreshToken', null, cookieOptions);
