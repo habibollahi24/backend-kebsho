@@ -170,8 +170,7 @@ class UserAuthController extends Controller {
       secure: true,
       secure: false,
       path: '/',
-      // domain: process.env.DOMAIN,
-      domain: req.hostname,
+      domain: process.env.DOMAIN,
     };
     res.cookie('accessToken', null, cookieOptions);
     res.cookie('refreshToken', null, cookieOptions);
