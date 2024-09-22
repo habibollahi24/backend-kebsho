@@ -78,6 +78,7 @@ async function setAccessToken(res, user) {
     sameSite: 'None',
     // secure: true,
     secure: process.env.NODE_ENV === 'development' ? false : true,
+    domain: req.hostname,
     // domain: process.env.DOMAIN,
   };
   res.cookie(
@@ -100,6 +101,7 @@ async function setRefreshToken(res, user) {
     sameSite: 'None',
     // secure: false,
     secure: process.env.NODE_ENV === 'development' ? false : true,
+    domain: req.hostname,
     // domain: process.env.DOMAIN,
   };
   res.cookie(
