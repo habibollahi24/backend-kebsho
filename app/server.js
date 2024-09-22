@@ -46,7 +46,7 @@ class Application {
   configServer() {
     this.#app.use(
       cors({
-        credentials: false,
+        credentials: true,
         origin: process.env.ALLOW_CORS_ORIGIN,
       })
     );
