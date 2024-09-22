@@ -74,10 +74,10 @@ async function setAccessToken(res, user) {
     maxAge: 1000 * 60 * 60 * 24 * 1, // would expire after 1 days
     httpOnly: true, // The cookie only accessible by the web server
     signed: true, // Indicates if the cookie should be signed
-    // sameSite: 'Lax',
-    sameSite: 'None',
-    secure: false,
-    // secure: process.env.NODE_ENV === "development" ? false : true,
+    sameSite: 'Lax',
+    // sameSite: 'None',
+    // secure: true,
+    secure: process.env.NODE_ENV === 'development' ? false : true,
     domain: process.env.DOMAIN,
   };
   res.cookie(
@@ -96,10 +96,10 @@ async function setRefreshToken(res, user) {
     maxAge: 1000 * 60 * 60 * 24 * 365, // would expire after 1 year
     httpOnly: true, // The cookie only accessible by the web server
     signed: true, // Indicates if the cookie should be signed
-    // sameSite: 'Lax',
-    sameSite: 'None',
-    secure: false,
-    // secure: process.env.NODE_ENV === "development" ? false : true,
+    sameSite: 'Lax',
+    // sameSite: 'None',
+    // secure: false,
+    secure: process.env.NODE_ENV === 'development' ? false : true,
     domain: process.env.DOMAIN,
   };
   res.cookie(
